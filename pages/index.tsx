@@ -77,7 +77,7 @@ export default function Home() {
               <Image src="/img/ads.jpg" alt="Ads สายเทา" width={380} height={380} className="imgp"/>
 
 
-            </div><Link href="/">โฆษณา Facebook Ads สายเทา</Link>
+            </div><Link href="/">โฆษณา Facebook สายเทา</Link>
                 </div>
               </div>
             </div>
