@@ -74,7 +74,7 @@ export default function Home() {
     
                   <div className="image-container">
                     
-              <Image src="/img/ads.jpg" alt="Ads สายเทา" width={380} height={380} className="imgp"  />
+              <Image src="/img/ads.jpg" alt="Ads สายเทา" width={380} height={380} className="imgp"/>
 
 
             </div><Link href="/">โฆษณา Facebook Ads สายเทา</Link>
