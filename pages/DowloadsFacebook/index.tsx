@@ -83,7 +83,7 @@ const App: FC = () => {
               width={480} 
               height={480} 
             />
-            <DownloadButtonWithCountdown fileName="Facebook" url="fb.zip" />
+            <DownloadButtonWithCountdown fileName="Facebook" url="facebook.zip" />
           </div>
         </div>
       </div>

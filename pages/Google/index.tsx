@@ -41,38 +41,38 @@ export default function index() {
 
 
    
-          <img width={480} height={550} src="/GoogleAds/gg.jpg" alt="Facebook Ads" className="imggg" />
+          <Image width={480} height={550} src="/GoogleAds/gg.jpg" alt="Facebook Ads" className="imggg" />
       <Link href="/">โฆษณา Google Ads สายเทา</Link>
  
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(1).jpg" alt="Facebook Ads" className="imggg"/>
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(1).jpg" alt="Facebook Ads" className="imggg"/>
        <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(2).jpg" alt="Facebook Ads" className="imggg" />
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(2).jpg" alt="Facebook Ads" className="imggg" />
        <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(3).jpg" alt="Facebook Ads" className="imggg" />
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(3).jpg" alt="Facebook Ads" className="imggg" />
         <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(4).jpg" alt="Facebook Ads" className="imggg"/>
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(4).jpg" alt="Facebook Ads" className="imggg"/>
         <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(5).jpg" alt="Facebook Ads" className="imggg" />
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(5).jpg" alt="Facebook Ads" className="imggg" />
         <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(6).jpg" alt="Facebook Ads" className="imggg"/>
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(6).jpg" alt="Facebook Ads" className="imggg"/>
         <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
      
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(8).jpg" alt="Facebook Ads"className="imggg" />
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(8).jpg" alt="Facebook Ads"className="imggg" />
        <Link href="/">โฆษณา Google Ads สายเทา</Link>
     
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(9).jpg" alt="Facebook Ads"className="imggg"/>
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(9).jpg" alt="Facebook Ads"className="imggg"/>
         <Link href="/">โฆษณา Google Ads สายเทา</Link>
      
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(10).jpg" alt="Facebook Ads" className="imggg" />
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(10).jpg" alt="Facebook Ads" className="imggg" />
        <Link href="/">โฆษณา Google Ads สายเทา</Link>
   
-          <img width={480} height={480} src="/GoogleAds/Google_Ads(11).jpg" alt="Facebook Ads" className="imggg" />
+          <Image width={480} height={480} src="/GoogleAds/Google_Ads(11).jpg" alt="Facebook Ads" className="imggg" />
       <Link href="/">โฆษณา Google Ads สายเทา</Link>
 
 </div>

@@ -21,7 +21,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 
   const handleAddData = async () => {
-    const response = await fetch('/api/add', {
+    const response = await fetch('https://api.service-ads.com/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),

@@ -1,6 +1,3 @@
-// ใช้ "use client" ในส่วนแรกของไฟล์
-// นี้บ่งชี้ว่า component หรือโมดูลนี้ควรรันบน client-side เท่านั้น
-
 import React, { useState, useEffect, FC } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -15,16 +12,14 @@ const CountdownModal: FC<CountdownModalProps> = ({ isOpen, onCountdownComplete, 
   const [count, setCount] = useState<number>(initialCount);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout | null = null;
+    let timer: NodeJS.Timeout;
     if (isOpen && count > 0) {
       timer = setTimeout(() => setCount(count - 1), 1000);
     } else if (count === 0) {
       onCountdownComplete();
       setCount(initialCount); // Reset for next time
     }
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, [isOpen, count, onCountdownComplete, initialCount]);
 
   if (!isOpen) return null;
@@ -73,9 +68,25 @@ const DownloadButtonWithCountdown: FC<DownloadButtonWithCountdownProps> = ({ fil
 const App: FC = () => {
   return (
     <>  
-      {/* Head Component เพื่อกำหนด meta tags และอื่นๆ */}
-      {/* Image Component ใช้สำหรับการโหลดรูปภาพ */}
-      {/* DownloadButtonWithCountdown Component สำหรับเริ่มต้นการดาวน์โหลด และแสดง CountdownModal */}
+      <Head>
+        <title>Download template website สำหรับทำโฆษณาสายเทา ฟรี</title>
+        <meta name="description" content="Download template website สำหรับทำโฆษณาสายเทา ฟรี"/>
+        {/* ปรับแต่ง meta tags และ elements ตามต้องการ */}
+      </Head>
+      <div className="container text-center" >
+        <h1>Download Files</h1>
+        <div className="d-flex">
+          <div className="p-2 flex-fill"> 
+            <Image
+              src="/img/Google.png" 
+              alt="Google_Ads_สายเทา" 
+              width={480} 
+              height={480} 
+            />
+            <DownloadButtonWithCountdown fileName="Google" url="Google.zip" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

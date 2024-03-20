@@ -55,37 +55,37 @@ export default function page() {
       
               
 
-          <img width={1040} height={550} src="/facebook_Ads_สายเทา/facebook-ads.jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1040} height={550} src="/facebook_Ads_สายเทา/facebook-ads.jpg" alt="Facebook Ads" className="imgfb" />
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                  
-          <img width={1820} height={600} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (1).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1820} height={600} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (1).jpg" alt="Facebook Ads" className="imgfb" />
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                 
-          <img width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (2).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (2).jpg" alt="Facebook Ads" className="imgfb" />
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                  
-          <img width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (3).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (3).jpg" alt="Facebook Ads" className="imgfb" />
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                  
-          <img width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (4).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (4).jpg" alt="Facebook Ads" className="imgfb" />
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                  
-          <img width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (5).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1080} height={400} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (5).jpg" alt="Facebook Ads" className="imgfb" />
         <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                 
-          <img width={1080} height={480} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (6).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1080} height={480} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (6).jpg" alt="Facebook Ads" className="imgfb" />
         <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                 
-          <img width={900} height={1080} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (7).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={900} height={1080} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (7).jpg" alt="Facebook Ads" className="imgfb" />
         <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
              
-          <img width={900} height={1080} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (8).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={900} height={1080} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (8).jpg" alt="Facebook Ads" className="imgfb" />
         <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                 
-          <img width={900} height={1080} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (9).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={900} height={1080} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (9).jpg" alt="Facebook Ads" className="imgfb" />
         <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
                 
-          <img width={1080} height={580} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (10).jpg" alt="Facebook Ads" className="imgfb" />
+          <Image width={1080} height={580} src="/facebook_Ads_สายเทา/โฆษณา_FaceBook_Ads_สายเทา (10).jpg" alt="Facebook Ads" className="imgfb" />
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
 
                  

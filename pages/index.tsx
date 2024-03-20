@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from 'next/head';
 import Link from 'next/link';
 import Reviews from './Reviews'
-import Linecut from "./component/linecut";
+
 
 export default function Home() {
   return (
