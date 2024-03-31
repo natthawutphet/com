@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.service-ads.com
+
+# Sitemaps
+Sitemap: https://www.service-ads.com/sitemap.xml

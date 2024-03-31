@@ -58,12 +58,13 @@ export default function Home() {
               <div className="col-md-6 py-5 wow fadeInLeft">
                 <h3 className="mb-4">โฆษณาออนไลน์สายเทาเพื่อธุรกิจของคุณ</h3>
                 <p >ผู้เชี่ยวชาญด้านการตลาดบน Google, YouTube และ Facebook</p>
-               
+                <p>https://www.youtube.com/@Google-dark</p>
 
-                <Link href="/vdo" >
+           
             
                 <Image src="/img/yt.jpg" alt="Ads สายเทา" width={150} height={80} className="yt" />
-                  </Link>
+
+               
               
               
               

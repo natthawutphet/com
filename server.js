@@ -1,34 +1,40 @@
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
+const { Server } = require("socket.io");
+const next = require("next");
+const http = require("http");
 
-const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'localhost'
-const port = process.env.PORT || 3000
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== "production";
+const nextApp = next({ dev });
+const nextHandler = nextApp.getRequestHandler();
 
-const app = next({ dev, hostname, port })
-const handle = app.getRequestHandler()
+nextApp.prepare().then(() => {
+    const server = http.createServer((req, res) => {
+        nextHandler(req, res);
+    });
 
-app.prepare().then(() => {
-  createServer(async (req, res) => {
-    try {
-      const parsedUrl = parse(req.url, true)
-      const { pathname, query } = parsedUrl
+    const io = new Server(server, {
+        cors: {
+            origin: "*",
+            methods: ["GET", "POST"]
+        }
+    });
+    
+    let viewers = [];
+    
+    io.on("connection", (socket) => {
+        const ip = socket.handshake.headers['x-forwarded-for'] || socket.conn.remoteAddress;
+        viewers.push({ id: socket.id, ip });
+        io.emit("update", { count: viewers.length, viewers });
+    
+        socket.on("disconnect", () => {
+            viewers = viewers.filter(viewer => viewer.id !== socket.id);
+            io.emit("update", { count: viewers.length, viewers });
+        });
+    });
+    
 
-      if (pathname === '/a') {
-        await app.render(req, res, '/a', query)
-      } else if (pathname === '/b') {
-        await app.render(req, res, '/b', query)
-      } else {
-        await handle(req, res, parsedUrl)
-      }
-    } catch (err) {
-      console.error('Error occurred handling', req.url, err)
-      res.statusCode = 500
-      res.end('internal server error')
-    }
-  }).listen(port, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://${hostname}:${port}`)
-  })
-})
+    server.listen(port, (err) => {
+        if (err) throw err;
+        console.log(`> Ready on http://localhost:${port}`);
+    });
+});

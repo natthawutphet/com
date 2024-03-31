@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import Onlines from './Onlines'
 
 export default function Admin() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 
   const handleAddData = async () => {
-    const response = await fetch('https://api.service-ads.com/add', {
+    const response = await fetch('/api/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
@@ -39,6 +40,12 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   return (
 
     <>
+<div className="text-center mt-5">
+  <> <Onlines/> </>
+</div>
+
+
+
     <div className='text-center w-50 mx-auto mt-5'>
 <div className="mb-3">
   <label  className="form-label">title</label>
@@ -49,17 +56,17 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   <input name="headline" className="form-control" value={formData.headline} onChange={handleInputChange} placeholder="Headline" />
 </div>
 <div className="mb-3">
-  <label  className="form-label">title</label>
+  <label  className="form-label">img</label>
   <input name="img" className="form-control" value={formData.img} onChange={handleInputChange} placeholder="Image URL" />
 </div>
 <div className="mb-3">
-  <label  className="form-label">Headline</label>
+  <label  className="form-label">youtube</label>
   <input name="youtube" className="form-control" value={formData.youtube} onChange={handleInputChange} placeholder="Youtube ID" />
 </div>
 <div className="mb-3">
   <label  className="form-label">Headline</label>
   <input name="content" className="form-control" value={formData.content} onChange={handleInputChange} placeholder="Content"/>
-  <button className='btn btn-secondary' onClick={handleAddData}>Add Data</button>
+  <button className='btn btn-info' onClick={handleAddData}>Add Data</button>
 
   <br /><br />
   <Link href="https://img.servermanagerads.com/" target='bank'>ฝากรูป</Link>

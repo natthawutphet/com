@@ -36,8 +36,9 @@ export default function page() {
 
         
       </Head>
-     
+      <div className="container">
       <div className="img-container">
+   
            
            <h3>รายละเอียดบริการ <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link></h3> 
 
@@ -89,6 +90,7 @@ export default function page() {
        <Link href="https://www.service-ads.com">รับทำโฆษณาFacebook Ads สายเทา</Link>
 
                  
+           </div>
            </div>
      
          

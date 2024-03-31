@@ -70,19 +70,37 @@ const App: FC = () => {
     <>  
       <Head>
         <title>Download template website สำหรับทำโฆษณาสายเทา ฟรี</title>
+
         <meta name="description" content="Download template website สำหรับทำโฆษณาสายเทา ฟรี"/>
         {/* ปรับแต่ง meta tags และ elements ตามต้องการ */}
       </Head>
       <div className="container text-center" >
-        <h1>Download Files</h1>
-        <div className="d-flex">
-          <div className="p-2 flex-fill"> 
-            <Image
+      <Image
               src="/img/facebook.png" 
               alt="Google_Ads_สายเทา" 
               width={480} 
               height={480} 
             />
+        <h3>สอนทำเว็บไซต์ sale Page Landing Page เพื่อไว้ใช้กับโฆษณา Facebook สายเทา 2024 (สายเทาห้ามพลาด)</h3>
+        <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/xH13j5aZ0tw?si=5ssabdXGxppg0_S5"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
+      <p>คลิปนี้ก็จะเป็นการสอนทำ sale Page Learning Page สำหรับนำไปไว้ใช้กับทำโฆษณา Facebook สายเทายิง conversion ก็ได้
+
+เริ่มตั้งแต่ต้นก็คือมีการสอนจดโดเมนคือ hosting กับ Host singer ที่ใช้งานง่ายมากๆไม่ยากเลยจากนั้นก็สามารถดาวน์โหลดไฟล์จากหน้าเว็บไซต์ของเราไปได้เลยเพื่อไป
+
+คลิปนี้ค่อนข้างมีเนื้อหาสาระที่สำคัญมากๆทุกคนไม่ควรพลาด สอนตั้งแต่เริ่มจนจบดูจนจบทำเป็นแน่นอนไม่ต้องห่วง
+
+สำหรับท่านใดที่ดูแล้วชื่นชอบคิดว่าคลิปนี้ไม่มีประโยชน์รบกวนกดไลค์กดคอมเม้นกดติดตามให้ด้วยนะครับขอบคุณครับ</p>
+        <div className="d-flex">
+          <div className="p-2 flex-fill"> 
+           
             <DownloadButtonWithCountdown fileName="Facebook" url="facebook.zip" />
           </div>
         </div>

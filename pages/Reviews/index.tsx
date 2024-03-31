@@ -23,7 +23,7 @@ export default function HomePage() {
         <meta name="author" content="adsmanager" />
         <meta property="og:title" content="รับทำโฆษณาออนไลน์สายเทา" />
         <meta property="og:description" content="รับทำโฆษณาออนไลน์สายเทา Google, YouTube, Facebook" />
-        <link rel="canonical" href='https://www.service-ads.com/' />
+        <link rel="canonical" href='https://www.myfbad.com/' />
       </Head>
     
       

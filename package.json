@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node app.js",
     "lint": "next lint",
-    "start": "NODE_ENV=production node server.js"
+    "build": "next build",
+    "postbuild": "next-sitemap"
+
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -16,12 +17,17 @@
     "mysql2": "^3.9.2",
     "next": "^14.1.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "ws": "^8.16.0",
+    "xmlbuilder2": "^3.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "next-sitemap": "^4.2.3",
     "typescript": "^5"
   }
 }

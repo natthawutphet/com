@@ -100,3 +100,16 @@ img.bounce {
 
   
 }
+
+
+.post {
+  width: 700px;
+  height: 400px;
+}
+
+@media screen and (max-width:480px) {
+  .post {
+    width: 330px;
+    height: 175px;
+  }
+}

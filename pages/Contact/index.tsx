@@ -56,7 +56,7 @@ function page() {
             
            <Link className="navbar-brand" href="/">
     
-    <Image src="/line.gif" alt="Favicon" width={200} height={60}  />
+    <Image src="/img/line.gif" alt="Favicon" width={200} height={60}  />
 
 
     

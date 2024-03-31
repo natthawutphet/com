@@ -1,72 +1,82 @@
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import Head from 'next/head'
+import { useState } from 'react'
+import { InferGetServerSidePropsType } from 'next'
 
-interface Post {
+
+type Props = {
+  posts: [Post]
+}
+
+type Post = {
   id: string;
   title: string;
   img?: string;
   youtube?: string;
-  h_line: string;
-  ppp: string;
+  headline: string;
+  content: string;
 }
 
-// ตัวอย่าง metadata สามารถนำมาใช้หรือปรับเปลี่ยนตามที่ต้องการ
-const pageMetadata = {
-  title: "หน้านี้เป็นความรู้ดีดีแจกฟรี รับทำโฆษณาออนไลน์ Google,Facebookสายเทา",
-  description: "หน้านี้เป็นความรู้ดีดีแจกฟรี",
-};
-
-export default function Home() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch('https://api.service-ads.com/api');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        const data: Post[] = await response.json();
-        setPosts(data);
-      } catch (error: any) {
-        console.error('Error fetching data:', error);
-        setError('An error occurred while fetching data.');
-      } finally {
-        setLoading(false);
-      }
+export async function getServerSideProps() {
+  try {
+    let response = await fetch("http://localhost:3000/api/get");
+    if (!response.ok) {
+      throw new Error(`Failed to fetch posts, status: ${response.status}`);
     }
-    fetchData();
-  }, []);
+    let posts = await response.json();
 
-  if (loading) {
-    return <p>Loading...</p>;
+    return {
+      props: { posts: JSON.parse(JSON.stringify(posts)) }, // ใช้ JSON.parse(JSON.stringify(posts)) เพื่อแปลงค่าใดๆ ที่อาจเป็น incompatible กับ JSON
+    };
+
+  } catch (e) {
+    console.error(e);
+    return {
+      props: { posts: [] }, // ตั้งค่าให้ posts เป็น array ว่างในกรณีของข้อผิดพลาด
+    };
   }
+}
 
-  if (error) {
-    return <p>{error}</p>;
+export default function Home(props: Props) {
+
+  const [posts, setPosts] = useState<[Post]>(props.posts);
+
+  const handleDeletePost = async (postId: string) => {
   }
 
   return (
-    <>
-      <Head>
-        <title>{pageMetadata.title}</title>
-        <meta name="description" content={pageMetadata.description} />
-      </Head>
-      <main className='container text-center'>
-        <div className="card mb-3">
-          {posts.map((post) => (
-            <li key={post.id}>
-              <h1>{post.title}</h1>
-              {post.img && (
+    <div className="container">
+     <Head>
+           <title>รับทำโฆษณาGoogleAdsสายเทา โฆษณาสายเทาเพื่อธุรกิจของคุณ</title>
+           <meta name="description" content="ทำโฆษณาเว็บไซต์ต่างๆด้วยทีมงานมือถือชีพ อัตราค่าบริการเพียงเดือนละ 9,900 บาทจบไม่มีค่าใช้จ่ายใดๆเพิ่มเติมทั้งสิ้น มีรีวิวจากลูกค้าจริงให้ชมไม่บิดไม่ทิ้งงานแน่นอน ทางทีมงานมีการรายงานผลงานทุกวัน"/>
+          
+           <meta name="keywords" content="ยิงads,facebook,สายเทา,โฆษณา,ยิงads facebook สายเทา,รับยิงads,รับยิงแอด สายเทา,facebook ads,google ads,google,รับยิงแอด,ads,รับทำโฆษณา,รับโฆษณา,Facebook,การตลาด,โฆษณาออนไลน์,เว็บไซต์,ตลาดเป้าหมาย,โฆษณาบนโซเชียลมีเดีย,Google Ads,การโฆษณาบน Facebook,การโฆษณาออนไลน์บนสื่อต่าง ๆ,การตลาดออนไลน์,การโปรโมท,โฆษณา Facebook,การโฆษณา Google,การโฆษณาสินค้า,การโฆษณาโปรโมชั่น,วิธีการโฆษณา,ความสำเร็จในการตลาด,บริการโฆษณา,การตลาดออนไลน์บน Facebook,การโฆษณาบนเว็บ,การวางแผนโฆษณา,รับจ้างโฆษณา"/>
+           <meta name="robots" content="index, follow"/>
+           <meta name="author" content="adsmanager"/>
+           <meta property="og:title" content="รับทำโฆษณาGoogleAdsสายเทา"/>
+           <meta property="og:description" content="รับทำโฆษณาGoogleAdsสายเทา โฆษณาสายเทาเพื่อธุรกิจของคุณ"/>
+    <meta property="og:image" content="https://www.service-ads.com/img/ads.jpg"/>
+    <link rel="canonical" href='https://www.service-ads.com/Google' /> 
+    </Head>
+
+      <>
+        <div className='container text-center'>
+     
+          {posts?.length > 0 ? (
+            <div className='posts-list'>
+              {posts.map((post, index) => {
+                return (
+                  <div key={index} className="post-item">
+                    <div className='card mb-3'>
+                    <h1>{post.title}</h1>
+                    {post.img && (
                 <div className="imgpost">
                   <img src={post.img} alt={post.title} style={{ width: '100%' }} />
                 </div>
               )}
-              {post.youtube && (
+               {post.youtube && (
                 <div className="videopost">
-                  <iframe
+                  <iframe 
+                  className='post'
                     src={`https://www.youtube.com/embed/${post.youtube}`}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -75,13 +85,26 @@ export default function Home() {
                   ></iframe>
                 </div>
               )}
-              <h3 className='card-title'>{post.h_line}</h3>
-              <p className='card-text'>{post.ppp}</p>
-            </li>
-          ))}
+               <h3 className="card-title">{post.headline}</h3>
+              <p className="card-text">{post.content}</p>
+                    </div>
+                    <div className='post-item-actions'>
+                     
+                   
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <h2 className='posts-body-heading'></h2>
+          )}
         </div>
-        <hr className='hr'/>
-      </main>
-    </>
-  );
+      </>
+
+     
+
+      
+    </div>
+  )
 }
